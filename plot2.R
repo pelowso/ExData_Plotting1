@@ -1,4 +1,7 @@
 setwd("D:/Dropbox/COURSERA/EXPLORATORY DATA ANALYSIS/WEEK 1/PROJECT_1")
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",
+              "household_power_consumption.zip")
+unzip("household_power_consumption.zip")
 data <- read.table("household_power_consumption.txt", header = TRUE, 
                    sep=";", na.strings = "?", dec=".", stringsAsFactors = FALSE)
 #data$Date <- strftime(strptime(data$Date, format ="%e/%m/%Y"), format = "%d/%m/%Y")
